@@ -17,7 +17,6 @@ import random
 from colorama import Fore, init
 from pystyle import Colorate, Colors, Center
 
-# Initialisation de Colorama
 init(autoreset=True)
 
 class CyberTool:
@@ -75,7 +74,6 @@ class CyberTool:
         print(Fore.CYAN + "[+] Lookup Website")
         domain = input(Fore.YELLOW + "Entrez un domaine ou une URL (ex: example.com) : ").strip()
         
-        # Nouveau code pour l'option 1
         try:
             ip = socket.gethostbyname(domain)
             response = requests.get(f"http://ip-api.com/json/{ip}")
@@ -181,7 +179,6 @@ class CyberTool:
         print(Fore.RED + "[!] Cette fonctionnalité n'est pas encore disponible.")
         input(Fore.CYAN + "Appuyez sur Entrée pour revenir au menu principal...")
 
-# Lancement de l'outil
 if __name__ == "__main__":
     tool = CyberTool()
     tool.homemenu()
